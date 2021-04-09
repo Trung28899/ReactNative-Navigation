@@ -12,6 +12,16 @@
 
 ## II. Module Notes:
 
+    - 4th Commit: Navigating Between Screens
+        +, ./screens/CategoriesScreen:
+            props.navigation.navigate({ routeName: "CategoryMeals" });
+        +, The Name in routeName has to match with one of the names in
+            ./navigation/MealsNavigator
+        +, Because the CategoriesScreen is set up in MealsNavigator,
+            it has props.navigation field
+        +, Screens in React Native is a stack of screens and React Native
+            automatically manage that screen stack for us
+
     - 3rd Commit: Setting Up Basic Navigation
         +, Installed packages down below
         +, ./navigation/MealNavigator: Basic navigation setup
