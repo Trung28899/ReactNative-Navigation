@@ -41,6 +41,14 @@
 
 ## II. Module Notes:
 
+    - 10th Commit: Setting default Header config. Improve Performance
+        +, ./navigation/MealsNavigator.js
+        +, defaultNavigationOptions setting the default navigation styles
+        +, This default option will always be overwritten by other method of
+            configuring screens such as setting navigationOptions like 7th Commit
+        +,  in App.js: run enableScreens(); before anything else to improve
+            app performance (won't be able to see right away but it will improve performance)
+
     - 9th Commit: Setting Dynamic Headers
         +, See navigationOptions in CategoryMealsScreen
 

@@ -4,12 +4,9 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  Button,
   TouchableOpacity,
-  Platform,
 } from "react-native";
 import { CATEGORIES } from "../data/dummy-data";
-import Colors from "../constants/Colors";
 
 const CategoryScreen = (props) => {
   const renderGridItem = (itemData) => {
@@ -40,18 +37,6 @@ const CategoryScreen = (props) => {
       numColumns={2}
     />
   );
-};
-
-/* 
-  Configuring the Header of a screen. If see nothing changes, 
-  need to reload the whole app to get it changes 
-*/
-CategoryScreen.navigationOptions = {
-  headerTitle: "Meals Categories",
-  headerStyle: {
-    backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",
-  },
-  headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
 };
 
 const styles = StyleSheet.create({
