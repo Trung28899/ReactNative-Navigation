@@ -10,11 +10,49 @@
             to navigate
         +, Illustration: https://rutgon.live/NAV
 
+    - Stack of screen:
+        +, React Native automatically manage navigation as a stack of screen
+        +, Stack is LIFO, navigation works like that
+        +, Stack methods are applicable: push, pop, replace
+
+    - See the following Navigation props methods for managing Screen stack
+        props.navigation.navigate("ScreenName");
+        props.navigation.push("ScreenName");
+
+        props.navigation.replace("ScreenName");
+            > replace the current screen on the stack. Application for this
+                is when user successfully login, they shouldn't have the
+                navigation option to come back to login screen
+
+        props.navigation.pop("ScreenName");
+            > pop the current screen and return to previous screen
+
+        props.navigation.popToTop();
+            > pop multiple screens all the way to the top screen
+
+    - Difference between .navigate() and .push()
+        +, Both of these method push a new screen to the stack
+        However, with .navigate(), React Native doesn't add a new same screen to stack
+        With .push(), React Native can add a same screen to stack
+        +, The application of adding a same screen to stack is adding same screen with
+        different content. This allow the user to navigate back to the same screen with
+        a different content.
+    Example: Folder Management App may use the same screen but different content
+
 ## II. Module Notes:
+
+    - 6th Commit: Outputting a Grid of Categories
+        +, ./screens/CategoriesScreen.js
+
+    - 5th Commit: push, pop, relace
+        +, Mess around with navigating to different screens
+        +, See Core Knowledge above for further navigating methods and knowledge
 
     - 4th Commit: Navigating Between Screens
         +, ./screens/CategoriesScreen:
             props.navigation.navigate({ routeName: "CategoryMeals" });
+            Alternative, can also use this syntax:
+            props.navigation.navigate('SomeIdentifier');
         +, The Name in routeName has to match with one of the names in
             ./navigation/MealsNavigator
         +, Because the CategoriesScreen is set up in MealsNavigator,
