@@ -41,6 +41,20 @@
 
 ## II. Module Notes:
 
+    - 8th Commit: Passing and Getting Params (passing props) with Navigation
+        +, Passing Params: ./screens/CategoriesScreen.js
+        +, Getting Params: ./screens/CategoryMealsScreen.js
+
+        +, Passing Params Syntax:
+            props.navigation.navigate({
+                routeName: "CategoryMeals",
+                params: {
+                    categoryId: itemData.item.id,
+                },
+            });
+        +, Getting Params Syntax:
+            const catID = props.navigation.getParam("categoryId");
+
     - 7th Commit: Configuring Headers with Navigation Options
         +, ./screens/CategoriesScreen.js
         +, If see nothing changes after follow the exact config
