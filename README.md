@@ -41,6 +41,11 @@
 
 ## II. Module Notes:
 
+    - 7th Commit: Configuring Headers with Navigation Options
+        +, ./screens/CategoriesScreen.js
+        +, If see nothing changes after follow the exact config
+        need to reload the whole app to get it changes
+
     - 6th Commit: Outputting a Grid of Categories
         +, ./screens/CategoriesScreen.js
 
