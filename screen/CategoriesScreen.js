@@ -43,10 +43,6 @@ const CategoryScreen = (props) => {
 };
 
 /* 
-  Adding property to CategoryScreen. CategoryScreen Technically
-  is a Javascript Function. A Javascript function is also a JS
-  Object
-
   Configuring the Header of a screen. If see nothing changes, 
   need to reload the whole app to get it changes 
 */

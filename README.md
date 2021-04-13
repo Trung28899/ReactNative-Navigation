@@ -41,6 +41,9 @@
 
 ## II. Module Notes:
 
+    - 9th Commit: Setting Dynamic Headers
+        +, See navigationOptions in CategoryMealsScreen
+
     - 8th Commit: Passing and Getting Params (passing props) with Navigation
         +, Passing Params: ./screens/CategoriesScreen.js
         +, Getting Params: ./screens/CategoryMealsScreen.js
