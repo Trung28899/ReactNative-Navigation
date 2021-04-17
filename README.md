@@ -41,6 +41,11 @@
 
 ## II. Module Notes:
 
+    - 11st Commit: Grid styling for Meals Categories
+        +, Video 127
+        +, See ./screens/CategoriesScreen.js
+        +, See ./components/CategoryGridTile.js
+
     - 10th Commit: Setting default Header config. Improve Performance
         +, ./navigation/MealsNavigator.js
         +, defaultNavigationOptions setting the default navigation styles
