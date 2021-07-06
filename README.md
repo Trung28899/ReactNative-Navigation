@@ -115,9 +115,6 @@
     - \$ npm install --save react-navigation-tabs
     - \$ npm install --save react-navigation-drawer
 
-
-
-
     IMPORTANT: Run the commands down below before start anything
     - \$ sudo npm --force update
 

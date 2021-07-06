@@ -1,41 +1,58 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-import { CATEGORIES } from "../data/dummy-data";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 
-const CategoryMealsScreen = (props) => {
-  const catID = props.navigation.getParam("categoryId");
-  const selectedCategory = CATEGORIES.find((cat) => cat.id === catID);
+import { CATEGORIES, MEALS } from "../data/dummy-data";
+import MealItem from "../components/MealItem";
+
+const CategoryMealScreen = (props) => {
+  const renderMealItem = (itemData) => {
+    return (
+      <MealItem
+        title={itemData.item.title}
+        image={itemData.item.imageUrl}
+        duration={itemData.item.duration}
+        complexity={itemData.item.complexity}
+        affordability={itemData.item.affordability}
+        onSelectMeal={() => {
+          props.navigation.navigate({
+            routeName: "MealDetail",
+            params: {
+              mealId: itemData.item.id,
+            },
+          });
+        }}
+      />
+    );
+  };
+
+  const catId = props.navigation.getParam("categoryId");
+
+  const displayedMeals = MEALS.filter(
+    (meal) => meal.categoryIds.indexOf(catId) >= 0
+  );
 
   return (
     <View style={styles.screen}>
-      <Text>{selectedCategory.title}</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => {
-          props.navigation.push("MealDetail");
-        }}
-      ></Button>
-      <Button
-        title="Go Back"
-        onPress={() => {
-          props.navigation.pop();
-        }}
+      <FlatList
+        data={displayedMeals}
+        keyExtractor={(item, index) => item.id}
+        renderItem={renderMealItem}
+        style={{ width: "100%" }}
       />
     </View>
   );
 };
 
-/* 
-  Configuring the Header of a screen. 
-  navigationData is automatically passed to the Component, like props 
-  Try to compare this to CategoryScreen
-*/
-CategoryMealsScreen.navigationOptions = (navigationData) => {
-  const catID = navigationData.navigation.getParam("categoryId");
-  const selectedCategory = CATEGORIES.find((cat) => cat.id === catID);
+CategoryMealScreen.navigationOptions = (navigationData) => {
+  const catId = navigationData.navigation.getParam("categoryId");
+
+  const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
 
   return {
     headerTitle: selectedCategory.title,
+    headerStyle: {
+      backgroundColor: "grey",
+    },
   };
 };
 
@@ -44,7 +61,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    padding: 15,
   },
 });
 
-export default CategoryMealsScreen;
+export default CategoryMealScreen;
