@@ -41,6 +41,11 @@
 
 ## II. Module Notes:
 
+    - 12nd Commit: Adding Header Buttons
+        +, Video 133
+        +, See ./screen/MealDetailScreen.js. Look for headerRight
+        +, See ./components/HeaderButton.js
+
     - 11st Commit: Grid styling for Meals Categories
         +, Video 127
         +, See ./screens/CategoriesScreen.js
