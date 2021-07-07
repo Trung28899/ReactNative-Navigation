@@ -41,6 +41,10 @@
 
 ## II. Module Notes:
 
+    - 13rd Commit: Config Tabs
+        +, Video 135 - 136
+        +, See ./navigation/MealNavigator.js
+
     - 12nd Commit: Adding Header Buttons
         +, Video 133
         +, See ./screen/MealDetailScreen.js. Look for headerRight
