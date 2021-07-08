@@ -41,6 +41,13 @@
 
 ## II. Module Notes:
 
+    - 14th Commit: Setting Up Drawers
+        +, Video 140
+        +, See MealsNavigator.js for Navigation Setup
+            (look for MainNavigator)
+        +, See CategoryScreen.js for Drawer Navigation UI
+            (look for navigationOptions)
+
     - 13rd Commit: Config Tabs
         +, Video 135 - 136
         +, See ./navigation/MealNavigator.js
