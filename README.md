@@ -41,7 +41,12 @@
 
 ## II. Module Notes:
 
-    - 14th Commit: Setting Up Drawers
+    - 15th Commit:
+        +, Added some screens (FilterScreen.js and MealDetailScreen.js)
+        +, setParams() in FilterScreen.js
+        +, Video 141 - 146
+
+    - 14th Commit: Setting Up Drawers - End of Module
         +, Video 140
         +, See MealsNavigator.js for Navigation Setup
             (look for MainNavigator)
@@ -144,3 +149,6 @@
 
     - Bottom Tab Navigator:
         https://reactnavigation.org/docs/material-bottom-tab-navigator/
+
+    - useEffect() and useCallback():
+        https://www.udemy.com/course/react-native-the-practical-guide/learn/lecture/15675136#content
