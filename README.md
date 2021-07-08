@@ -131,3 +131,9 @@
 
     - Official Docs:
         https://reactnavigation.org/docs/4.x/getting-started/
+
+    - Top Tab Navigator:
+        https://reactnavigation.org/docs/material-top-tab-navigator/
+
+    - Bottom Tab Navigator:
+        https://reactnavigation.org/docs/material-bottom-tab-navigator/
